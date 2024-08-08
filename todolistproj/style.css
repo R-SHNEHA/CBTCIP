@@ -1,0 +1,168 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('C:/Users/shneh/OneDrive/Desktop/todolistproj/todobg2.webp') no-repeat center center fixed; 
+    background-size: cover;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);  
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #2c3e50;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+input, textarea, select, button {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #8e735b; 
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #6d4c41;  
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+li:hover {
+    background-color: #f9f9f9;
+    border-color: #3498db;
+}
+
+.task span {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+ 
+.task div {
+    display: flex;
+    gap: 10px; 
+}
+
+.task div button {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task div button:hover {
+    background-color: #c0392b;
+}
+
+.task div button:first-child {
+    background-color: #2ecc71;
+}
+
+.task div button:first-child:hover {
+    background-color: #27ae60;
+}
+#progress-bar {
+    background-color: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 20px;
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+#progress-bar .progress-bar-fill {
+    background-color: #2ecc71;  
+    height: 100%;
+    width: 0;
+    transition: width 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#progress-bar span {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    input, textarea, select, button {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}

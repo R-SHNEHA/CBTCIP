@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive To-Do List</h1>
+        <form id="task-form">
+            <input type="text" id="task-title" placeholder="Task Title" required>
+            <textarea id="task-desc" placeholder="Task Description"></textarea>
+            <input type="date" id="task-date">
+            <select id="task-priority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+        <div id="task-list">
+            <h2>Tasks</h2>
+            <ul id="tasks"></ul>
+        </div>
+        <div id="completed-list">
+            <h2>Completed Tasks</h2>
+            <ul id="completed-tasks"></ul>
+        </div>
+        <div id="progress-tracker">
+            <h2>Progress Tracker</h2>
+        <div id="progress-bar">
+            <span>0% Completed</span>
+            <div class="progress-bar-fill"></div>
+        </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
